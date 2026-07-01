@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(terraform providers schema *)",
+      "Bash(aws s3 ls *)",
+      "Bash(aws bedrock list-*)"
+    ]
+  }
+}

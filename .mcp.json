@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "backlog": {
+      "command": "npx",
+      "args": ["-y", "backlog-mcp-server"],
+      "env": {
+        "BACKLOG_DOMAIN": "${BACKLOG_DOMAIN}",
+        "BACKLOG_API_KEY": "${BACKLOG_API_KEY}"
+      }
+    },
+    "google": {
+      "command": "/opt/homebrew/bin/uvx",
+      "args": [
+        "--from", "/Users/18381/work/google_workspace_mcp",
+        "workspace-mcp",
+        "--single-user",
+        "--tools", "gmail", "calendar", "chat", "contacts"
+      ],
+      "env": {
+        "GOOGLE_OAUTH_CLIENT_ID": "${GOOGLE_OAUTH_CLIENT_ID}",
+        "GOOGLE_OAUTH_CLIENT_SECRET": "${GOOGLE_OAUTH_CLIENT_SECRET}",
+        "OAUTHLIB_INSECURE_TRANSPORT": "1",
+        "USER_GOOGLE_EMAIL": "${USER_GOOGLE_EMAIL}",
+        "PATH": "/opt/homebrew/bin:/usr/bin:/bin"
+      }
+    }
+  }
+}
